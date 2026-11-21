@@ -1,0 +1,29 @@
+# secrets
+.env
+*.key
+
+# data and audio
+data/
+*.wav
+*.flac
+*.mp3
+*.ogg
+*.m4a
+
+# model checkpoints
+*.pt
+*.pth
+*.bin
+*.safetensors
+*.ckpt
+checkpoints/
+
+# python / notebooks
+__pycache__/
+.venv/
+.ipynb_checkpoints/
+.pytest_cache/
+# strip notebook outputs before committing; keep screenshots in evidence/
+
+# os / editor
+.DS_Store
