@@ -1,6 +1,6 @@
 # PLAN (the ONLY place for tasks, owners, blockers and status)
 
-Status values: todo | doing | blocked | done. Stage: day 0 (repo setup). Target date: TBD. Roles are proposed, not yet confirmed by the team.
+Status values: todo | doing | blocked | done. Stage: day 0 (repo setup). Target date: TBD. The team confirmed the roles below.
 
 ## Roles (owner / backup)
 | Area | Owner | Backup |
