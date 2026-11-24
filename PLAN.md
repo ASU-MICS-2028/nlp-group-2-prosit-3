@@ -17,7 +17,7 @@ Rotation rule: everyone runs the whole pipeline once on 10 clips and writes one 
 ## Must
 | ID | Task | Owner | Blocked-by | Done-when | Status |
 |---|---|---|---|---|---|
-| M0 | Decision spike (2 h max): model, subset, WER method, demo tool | all | none | 4 ADRs in docs/decisions.md | todo |
+| M0 | Decision spike (2 h max): model, subset, WER method, demo tool | all | none | 4 ADRs in docs/decisions.md | doing |
 | M1 | Report answers Q1-Q3 with citations | Q1 Perfect, Q2 Opei, Q3 Elise | none (write skeleton day 1) | outline slots filled, every claim cited | todo |
 | D1 | Subset loader + manifest script (no audio committed) | Elise | M0 | script reproduces the subset from a seed | todo |
 | E1 | WER function + pytest, works on a fake CSV | Opei | none | tests pass on the worked example in knowledge/understanding.md | todo |
