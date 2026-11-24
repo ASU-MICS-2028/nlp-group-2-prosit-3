@@ -10,7 +10,7 @@ Owner: <name>   Backup: <name>
 ## Glossary (every technical term in one line)
 - term: meaning
 
-## Viva questions (5, with answers written by the owner)
+## Viva practice (optional; AI may draft questions and answers; add "checked by: <name>" once a human confirms them)
 1. Q:
    A:
 2. Q:

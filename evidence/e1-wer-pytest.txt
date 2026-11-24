@@ -1,0 +1,50 @@
+# E1 evidence: WER tests (branch e1-wer, on top of main 3097200, before commit)
+
+Date: 2026-11-24. Python 3.13.18, pytest 9.1.1, jiwer 4.0.0 (cross-check only). Hardware: cloud CPU container.
+
+$ pytest -v
+============================= test session starts ==============================
+platform linux -- Python 3.13.18, pytest-9.1.1, pluggy-1.6.0
+rootdir: <repo root>
+configfile: pyproject.toml
+testpaths: tests
+plugins: anyio-4.15.1
+collecting ... collected 18 items
+
+tests/test_wer.py::test_worked_example_from_understanding_md PASSED      [  5%]
+tests/test_wer.py::test_self_test_question_3 PASSED                      [ 11%]
+tests/test_wer.py::test_identical_is_zero PASSED                         [ 16%]
+tests/test_wer.py::test_case_and_punctuation_do_not_count PASSED         [ 22%]
+tests/test_wer.py::test_numbers_are_not_converted PASSED                 [ 27%]
+tests/test_wer.py::test_empty_hypothesis_is_all_deletions PASSED         [ 33%]
+tests/test_wer.py::test_wer_can_exceed_one PASSED                        [ 38%]
+tests/test_wer.py::test_empty_reference_raises PASSED                    [ 44%]
+tests/test_wer.py::test_alignment_lists_each_step PASSED                 [ 50%]
+tests/test_wer.py::test_corpus_wer_is_not_the_mean_of_clip_wers PASSED   [ 55%]
+tests/test_wer.py::test_apostrophe_and_unicode_kept_as_one_word PASSED   [ 61%]
+tests/test_wer.py::test_fake_csv_overall_and_grouped PASSED              [ 66%]
+tests/test_wer.py::test_missing_column_fails_loudly PASSED               [ 72%]
+tests/test_wer.py::test_empty_reference_row_fails_loudly PASSED          [ 77%]
+tests/test_wer.py::test_empty_hypothesis_cell_is_allowed PASSED          [ 83%]
+tests/test_wer.py::test_unknown_group_column_fails PASSED                [ 88%]
+tests/test_wer.py::test_cli_prints_table PASSED                          [ 94%]
+tests/test_wer_vs_jiwer.py::test_matches_jiwer_on_2000_random_pairs PASSED [100%]
+
+============================== 18 passed in 0.14s ==============================
+
+$ python -m evaluation.wer tests/fixtures/fake_transcripts.csv --by accent
+group | N | S | D | I | WER
+---|---|---|---|---|---
+ALL | 23 | 2 | 1 | 4 | 0.3043
+accent=twi | 8 | 1 | 0 | 1 | 0.2500
+accent=yoruba | 9 | 0 | 1 | 2 | 0.3333
+accent=igbo | 6 | 1 | 0 | 1 | 0.3333
+
+$ python -m evaluation.wer tests/fixtures/fake_transcripts.csv --by domain
+group | N | S | D | I | WER
+---|---|---|---|---|---
+ALL | 23 | 2 | 1 | 4 | 0.3043
+domain=clinical | 18 | 2 | 1 | 3 | 0.3333
+domain=general | 5 | 0 | 0 | 1 | 0.2000
+
+Note: the CSV is made-up text, not AfriSpeech data and not model output. These numbers are NOT results.
