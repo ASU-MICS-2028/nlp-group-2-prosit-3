@@ -32,7 +32,17 @@ Plain words first, maths second. Maths gets one tiny worked example with real nu
 - Cite everything used. Quote only what we have read.
 
 ## Done means
-Code + test + evidence + learnings note (with 5 viva Q&A written by the owner) + PLAN row, in ONE change.
+Code + test + evidence + learnings note + PLAN row, in ONE change. Viva Q&A does NOT block "done".
+
+## Viva practice (optional, offered every time)
+After the work is finished and BEFORE any push, ask once:
+"Want 5 viva questions with answers for what you just built? Now, or later in learnings/<area>.md?"
+- Yes: write 5 questions WITH answers in the learnings note, in plain words, so teammates who did not build it can
+  study them too. Mark each block "AI draft, checked by: nobody yet". The person (or a teammate) replaces that with
+  their name once they have read it and confirmed it is correct.
+- Later or no: add nothing, do not delay the push, leave "Viva practice: pending" in the note.
+- Answers must only use what the code, the evidence or a cited source shows. Mark anything unverified.
+- Log it in docs/ai-tools-usage.md.
 
 ## Session end
 What changed · how to check · what I could not test · teaching block · paste-ready PR description · short teammate message.
