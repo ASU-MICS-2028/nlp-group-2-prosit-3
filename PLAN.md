@@ -14,6 +14,15 @@ Status values: todo | doing | blocked | done. Stage: day 0 (repo setup). Target 
 
 Rotation rule: everyone runs the whole pipeline once on 10 clips and writes one Section B paragraph about a stage they don't own.
 
+## Why S1, C1 and C2 moved (proposed 2026-11-24 by Opei; team to agree on this PR)
+- **S1 is now Must.** Q2 promises "citations AND our own measurement" (knowledge/understanding.md). If S1 is cut,
+  Q2 has no measured RNN-vs-transformer result of our own and rests on papers alone.
+- **C2 (fine-tuning) and C1 (per-accent, clinical vs general) are now Should.** The brief is titled "Supervised Speech
+  Recognition with Transformers", its learning outcomes say "construct, **train**, evaluate, and deploy" and
+  "propose ... novel ideas for building contextually relevant NLP solutions for **Africa**". Keeping both in the
+  cut-first tier risks dropping exactly what the brief stresses.
+- C3 (deployment) stays Could. IDs are unchanged so links elsewhere still work.
+
 ## Must
 | ID | Task | Owner | Blocked-by | Done-when | Status |
 |---|---|---|---|---|---|
@@ -24,17 +33,17 @@ Rotation rule: everyone runs the whole pipeline once on 10 clips and writes one 
 | M2 | One real AfriSpeech clip transcribed, WER measured | Perfect | M0, D1 (fallback: any public sample clip) | row in experiments/log.md + file in evidence/ | todo |
 | M3 | Small demo (audio in, text out) | Nana | M2 (fallback: stub model) | demo runs; bad-audio and empty-transcript cases handled | todo |
 | M4 | Q4 section: can we build it | Nana | M2, M3 | written with evidence links | todo |
+| S1 | Small RNN/CTC baseline vs pretrained transformer, SAME subset, split, metric | Perfect + Opei | D1, M2, E1 | both rows in experiments/log.md, hardware and seed noted | todo |
 
 ## Should
 | ID | Task | Owner | Blocked-by | Done-when | Status |
 |---|---|---|---|---|---|
-| S1 | Small RNN/CTC baseline vs pretrained transformer, SAME subset, split, metric | Perfect + Opei | D1, M2, E1 | both rows in experiments/log.md, hardware and seed noted | todo |
+| C2 | Fine-tuning | Perfect | S1 | measured WER change | todo |
+| C1 | Per-accent and clinical vs general analysis | Opei | S1 | table in report + evidence | todo |
 
 ## Could (cut from the bottom first)
 | ID | Task | Owner | Blocked-by | Done-when | Status |
 |---|---|---|---|---|---|
-| C1 | Per-accent and clinical vs general analysis | Opei | S1 | table in report + evidence | todo |
-| C2 | Fine-tuning | Perfect | S1 | measured WER change | todo |
 | C3 | Deployment | Nana | M3 | reachable demo | todo |
 
 ## Deliverables checklist
