@@ -1,0 +1,6 @@
+id,reference,hypothesis,accent,domain
+fake-01,the patient has fever,the patient had a fever,twi,clinical
+fake-02,take two tablets daily,take tablets daily now,yoruba,clinical
+fake-03,blood pressure is normal,blood pressure is normal,twi,clinical
+fake-04,the market opens at noon,the market opens at noon today,yoruba,general
+fake-05,Paracetamol 500 mg twice a day.,paracetamol five hundred mg twice a day,igbo,clinical

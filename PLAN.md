@@ -20,7 +20,7 @@ Rotation rule: everyone runs the whole pipeline once on 10 clips and writes one 
 | M0 | Decision spike (2 h max): model, subset, WER method, demo tool | all | none | 4 ADRs in docs/decisions.md | todo |
 | M1 | Report answers Q1-Q3 with citations | Q1 Perfect, Q2 Opei, Q3 Elise | none (write skeleton day 1) | outline slots filled, every claim cited | todo |
 | D1 | Subset loader + manifest script (no audio committed) | Elise | M0 | script reproduces the subset from a seed | todo |
-| E1 | WER function + pytest, works on a fake CSV | Opei | none | tests pass on the worked example in knowledge/understanding.md | todo |
+| E1 | WER function + pytest, works on a fake CSV | Opei | none | tests pass on the worked example in knowledge/understanding.md | done (branch e1-wer; evidence/e1-wer-pytest.txt) |
 | M2 | One real AfriSpeech clip transcribed, WER measured | Perfect | M0, D1 (fallback: any public sample clip) | row in experiments/log.md + file in evidence/ | todo |
 | M3 | Small demo (audio in, text out) | Nana | M2 (fallback: stub model) | demo runs; bad-audio and empty-transcript cases handled | todo |
 | M4 | Q4 section: can we build it | Nana | M2, M3 | written with evidence links | todo |
