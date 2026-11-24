@@ -101,7 +101,7 @@ Early end-to-end systems used them with CTC.
 **What we would honestly also say in favour of RNNs:** small, cheap at inference, can stream (process audio as it
 arrives), and are simpler to understand. Report these. A fair comparison has both sides.
 
-**Our experiment (SHOULD tier):** a small RNN/CTC baseline vs a pretrained transformer, on the *same* small subset,
+**Our experiment (MUST tier):** a small RNN/CTC baseline vs a pretrained transformer, on the *same* small subset,
 *same* metric (WER), *same* split, with hardware and seed noted. If the RNN wins on our setup, we report that too.
 Negative results count.
 
@@ -121,9 +121,10 @@ Negative results count.
 | Viva readiness | Each owner writes 5 viva Q&A in their learnings note; everyone runs the whole pipeline once on 10 clips | `learnings/*.md` |
 
 **Scope ladder (cut from the bottom first):**
-- **MUST:** honest, cited answers to Q1-Q3; one real AfriSpeech clip transcribed with a measured WER; a small demo.
-- **SHOULD:** RNN/CTC baseline vs pretrained transformer on the same small subset.
-- **COULD:** fine-tuning, per-accent analysis, deployment.
+- **MUST:** honest, cited answers to Q1-Q3; one real AfriSpeech clip transcribed with a measured WER; a small demo;
+  RNN/CTC baseline vs pretrained transformer on the same small subset (so Q2 has our own measurement).
+- **SHOULD:** fine-tuning; per-accent and clinical vs general analysis (the brief stresses training and Africa-focused ideas).
+- **COULD:** deployment.
 
 **How we avoid last project's failures:**
 | Prosit 2 problem | Rule now |
